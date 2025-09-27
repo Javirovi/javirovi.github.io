@@ -1,0 +1,22 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import LanguageToggle from '../../components/LanguageToggle.astro';
+import Hero from '../../components/Hero.astro';
+import ReelsSection from '../../components/ReelsSection.astro';
+import ProjectModal from '../../components/ProjectModal.astro';
+import OtherSection from '../../components/OtherSection.astro';
+import Footer from '../../components/Footer.astro';
+
+const lang = 'en';
+---
+
+<Layout title="Portfolio - Junior Animator" lang={lang}>
+  <LanguageToggle currentLang={lang} />
+  <main>
+    <Hero lang={lang} />
+    <ReelsSection lang={lang} />
+    <OtherSection lang={lang} />
+  </main>
+  <Footer lang={lang} />
+  <ProjectModal lang={lang} />
+</Layout>
