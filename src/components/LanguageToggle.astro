@@ -1,0 +1,70 @@
+---
+export interface Props {
+  currentLang: string;
+}
+
+const { currentLang } = Astro.props;
+const altLang = currentLang === 'es' ? 'en' : 'es';
+const altLangPath = currentLang === 'es' ? '/en/' : '/es/';
+---
+
+<div class="language-toggle">
+  <a
+    href={altLangPath}
+    class={`lang-btn ${currentLang === 'es' ? 'active-es' : 'active-en'}`}
+    aria-label="Switch language"
+  >
+    <span class={currentLang === 'es' ? 'active' : ''}>ES</span>
+    <span class="separator">|</span>
+    <span class={currentLang === 'en' ? 'active' : ''}>EN</span>
+  </a>
+</div>
+
+<style>
+  .language-toggle {
+    position: fixed;
+    top: var(--spacing-lg);
+    right: var(--spacing-lg);
+    z-index: 1000;
+  }
+
+  .lang-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    padding: var(--spacing-sm) var(--spacing-md);
+    background-color: rgba(255, 247, 235, 0.1);
+    border: 2px solid var(--color-text);
+    border-radius: var(--radius);
+    color: var(--color-text);
+    font-weight: 600;
+    transition: var(--transition);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  }
+
+  .lang-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    background-color: rgba(255, 247, 235, 0.15);
+    opacity: 1;
+  }
+
+  .lang-btn span {
+    transition: var(--transition);
+  }
+
+  .lang-btn span.active {
+    color: var(--color-primary);
+  }
+
+  .separator {
+    opacity: 0.3;
+  }
+
+  @media (max-width: 768px) {
+    .language-toggle {
+      top: var(--spacing-md);
+      right: var(--spacing-md);
+    }
+  }
+</style>

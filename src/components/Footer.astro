@@ -1,0 +1,51 @@
+---
+export interface Props {
+  lang: string;
+}
+
+import { getTranslations } from '../i18n/translations';
+import SocialLinks from './SocialLinks.astro';
+import { siteConfig } from '../config/site-config';
+
+const { lang } = Astro.props;
+const t = getTranslations(lang);
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-content">
+      <p>© {currentYear} {siteConfig.personal.name}. {t.footer.rights}.</p>
+      <SocialLinks className="footer-social" />
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    background-color: rgba(0, 0, 0, 0.3);
+    color: var(--color-text);
+    padding: var(--spacing-2xl) 0;
+    border-top: 1px solid rgba(255, 247, 235, 0.1);
+  }
+
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .footer-content p {
+    margin: 0;
+    opacity: 0.9;
+  }
+
+
+  @media (max-width: 768px) {
+    .footer-content {
+      flex-direction: column;
+      gap: var(--spacing-lg);
+      text-align: center;
+    }
+  }
+</style>
