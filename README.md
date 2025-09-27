@@ -1,43 +1,39 @@
-# Astro Starter Kit: Minimal
+# Sitio Web Portfolio - Javier Rodríguez Vicedo
 
-```sh
-npm create astro@latest -- --template minimal
-```
+## Cómo Actualizar el Contenido
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+### Actualizaciones Rápidas
 
-## 🚀 Project Structure
+#### 1. **Cambiar tu Información de Contacto y Redes Sociales**
+Edita el archivo: `src/config/site-config.ts`
+- Actualiza el email
+- Cambia los enlaces de LinkedIn, Vimeo
+- Añade nuevas redes sociales (Instagram, GitHub, Twitter disponibles)
 
-Inside of your Astro project, you'll see the following folders and files:
+#### 2. **Actualizar tus Proyectos/Animaciones**
+Edita el archivo: `src/data/reels.ts`
+- Añade nuevos proyectos con título, descripción, enlace de vídeo
+- Actualiza la información de proyectos existentes
+- Recuerda actualizar ambas secciones: español (es) e inglés (en)
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+#### 3. **Actualizar Otros Trabajos**
+Edita el archivo: `src/data/other-projects.ts`
+- Añade piezas de portfolio que enlazan a sitios externos
+- Actualiza las descripciones de proyectos
+- Recuerda ambos idiomas
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+#### 4. **Cambiar el Texto "Sobre Mí"**
+Edita el archivo: `src/i18n/translations.ts`
+- Actualiza tu biografía/descripción
+- Cambia el título profesional
+- Modifica cualquier texto del sitio web
+- Recuerda ambos idiomas
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+### Dónde Colocar los Archivos
+- **Imágenes**: Colócalas en `src/assets/`
+- **Vídeos**: Colócalos en `public/videos/`
 
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+### Importante
+- Siempre actualiza el contenido en AMBOS idiomas (español e inglés)
+- Usa **asteriscos** para texto en **negrita** en las descripciones
+- No borres corchetes, comillas o comas - solo cambia el texto dentro de las comillas
