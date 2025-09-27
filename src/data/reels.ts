@@ -24,9 +24,9 @@ export const reels: ReelsData = {
   es: [
     {
       id: 'proyecto1',
-      title: 'Animation Reel 2025',
-      shortDescription: 'Spot publicitario animado para marca local',
-      longDescription: 'Desarrollo completo de un spot publicitario de 30 segundos para una marca local. El proyecto incluyó diseño de personajes, storyboard, animación y postproducción.',
+      title: 'ANIMATION REEL 2025',
+      shortDescription: ' ',
+      longDescription: 'Resumen de mi trabajo de animación actualizado.',
       thumbnail: '/images/placeholder.svg', // For optimized images: import from assets and use .src
       videoUrl: '/videos/project1.mp4',
       software: 'Autodesk Maya y Blender',
@@ -59,8 +59,8 @@ export const reels: ReelsData = {
   en: [
     {
       id: 'project1',
-      title: 'Animation Reel 2025',
-      shortDescription: 'Animated advertising spot for local brand',
+      title: 'ANIMATION REEL 2025',
+      shortDescription: 'Updated summary of my animation work.',
       longDescription: 'Complete development of a 30-second advertising spot for a local brand. The project included character design, storyboard, animation, and post-production.',
       thumbnail: '/images/placeholder.svg', // For optimized images: import from assets and use .src
       videoUrl: '/videos/project1.mp4',
