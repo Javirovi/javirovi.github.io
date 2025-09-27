@@ -36,8 +36,8 @@ export const reels: ReelsData = {
     {
       id: 'proyecto2',
       title: 'Lucus Cleanup Reel 2024',
-      shortDescription: 'Video explicativo con infografías animadas',
-      longDescription: 'Creación de un video corporativo con motion graphics para explicar procesos complejos de manera visual y atractiva. Incluye animación de datos, iconografía personalizada y transiciones fluidas.',
+      shortDescription: ' ',
+      longDescription: 'En 2024 realicé mis prácticas universitarias con el animador gallego David Fidalgo, trabajando durante 4 meses en la producción de su corto "Lucus" como artista de cleanup. También realicé otras tareas, como color e iluminación.',
       thumbnail: '/images/placeholder.svg', // For optimized images: import from assets and use .src
       videoUrl: '/videos/project2.mp4',
       software: 'Blender',
@@ -47,7 +47,7 @@ export const reels: ReelsData = {
     {
       id: 'proyecto3',
       title: 'Cornelius Color Reel 2025',
-      shortDescription: 'Cortometraje animado con personajes 2D',
+      shortDescription: '',
       longDescription: 'Cortometraje de animación 2D con personajes originales. El proyecto abarcó desde el diseño conceptual hasta la animación final, incluyendo rigging y efectos especiales.',
       thumbnail: '/images/placeholder.svg', // For optimized images: import from assets and use .src
       videoUrl: '/videos/project3.mp4',
@@ -60,8 +60,8 @@ export const reels: ReelsData = {
     {
       id: 'project1',
       title: 'ANIMATION REEL 2025',
-      shortDescription: 'Updated summary of my animation work.',
-      longDescription: 'Complete development of a 30-second advertising spot for a local brand. The project included character design, storyboard, animation, and post-production.',
+      shortDescription: '',
+      longDescription: 'Back in 2024 I completed my college internship with galician animator David Fidalgo, working for 4 months on the production of his short film "Lucus" as a cleanup artist. I also performed other tasks such as coloring and lighting. ',
       thumbnail: '/images/placeholder.svg', // For optimized images: import from assets and use .src
       videoUrl: '/videos/project1.mp4',
       software: 'Autodesk Maya y Blender',
@@ -71,7 +71,7 @@ export const reels: ReelsData = {
     {
       id: 'project2',
       title: 'Lucus Cleanup Reel 2024',
-      shortDescription: 'Explainer video with animated infographics',
+      shortDescription: '',
       longDescription: 'Creation of a corporate video with motion graphics to explain complex processes in a visual and attractive way. Includes data animation, custom iconography, and smooth transitions.',
       thumbnail: '/images/placeholder.svg', // For optimized images: import from assets and use .src
       videoUrl: '/videos/project2.mp4',
@@ -82,7 +82,7 @@ export const reels: ReelsData = {
     {
       id: 'project3',
       title: 'Cornelius Color Reel 2025',
-      shortDescription: '2D animated short film with characters',
+      shortDescription: '',
       longDescription: '2D animated short film with original characters. The project covered from conceptual design to final animation, including rigging and special effects.',
       thumbnail: '/images/placeholder.svg', // For optimized images: import from assets and use .src
       videoUrl: '/videos/project3.mp4',
