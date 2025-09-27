@@ -1,0 +1,126 @@
+---
+export interface Props {
+  project: {
+    id: string;
+    title: string;
+    shortDescription: string;
+    thumbnail: string;
+  };
+  index: number;
+}
+
+const { project, index } = Astro.props;
+---
+
+<article class="project-card fade-in" data-project-id={project.id}>
+  <button class="card-button" data-index={index} aria-label={`Ver proyecto: ${project.title}`}>
+    <div class="card-image">
+      <img src={project.thumbnail} alt={project.title} loading="lazy" />
+      <div class="card-overlay">
+        <span class="material-symbols-outlined play-icon">
+          play_circle
+        </span>
+      </div>
+    </div>
+    <div class="card-content">
+      <h3>{project.title}</h3>
+      <p>{project.shortDescription}</p>
+    </div>
+  </button>
+</article>
+
+<style>
+  .project-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--radius);
+    background: var(--color-bg-main);
+    border: 1px solid rgba(255, 247, 235, 0.1);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+    transition: var(--transition);
+  }
+
+  .project-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 247, 235, 0.2);
+  }
+
+  .card-button {
+    display: block;
+    width: 100%;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    padding: 0;
+  }
+
+  .card-image {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    overflow: hidden;
+    background: var(--color-bg-alt);
+  }
+
+  .card-image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+  }
+
+  .card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(40, 62, 56, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: var(--transition);
+  }
+
+  .project-card:hover .card-overlay {
+    opacity: 1;
+  }
+
+  .project-card:hover .card-image img {
+    transform: scale(1.05);
+  }
+
+  .play-icon {
+    font-size: 4rem;
+    color: var(--color-primary);
+    filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.5));
+    transition: var(--transition);
+  }
+
+  .project-card:hover .play-icon {
+    transform: scale(1.1);
+  }
+
+  .card-content {
+    padding: var(--spacing-lg);
+  }
+
+  .card-content h3 {
+    color: var(--color-text);
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .card-content p {
+    color: var(--color-text);
+    opacity: 0.8;
+    font-size: 0.95rem;
+    margin-bottom: 0;
+  }
+</style>

@@ -1,0 +1,258 @@
+---
+export interface Props {
+  lang: string;
+}
+
+import { getTranslations } from '../i18n/translations';
+import { reels } from '../data/reels';
+
+const { lang } = Astro.props;
+const t = getTranslations(lang);
+const projects = reels[lang as 'es' | 'en'] || reels.es;
+---
+
+<div id="project-modal" class="modal" aria-hidden="true">
+  <div class="modal-overlay"></div>
+  <div class="modal-content">
+    <button class="modal-close" aria-label={t.modal.close}>
+      <span class="material-symbols-outlined">
+        close
+      </span>
+    </button>
+    <div class="modal-body">
+      <div class="video-container">
+        <video id="modal-video" controls playsinline>
+          <source src="" type="video/mp4" />
+        </video>
+      </div>
+      <div class="modal-info">
+        <h3 id="modal-title"></h3>
+        <p id="modal-description"></p>
+        <div class="modal-meta">
+          <div class="meta-item">
+            <strong>{t.modal.duration}:</strong>
+            <span id="modal-duration"></span>
+          </div>
+          <div class="meta-item">
+            <strong>{t.modal.software}:</strong>
+            <span id="modal-software"></span>
+          </div>
+          <div class="meta-item">
+            <strong>{t.modal.credits}:</strong>
+            <span id="modal-credits"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script define:vars={{ projects }} is:inline>
+  document.addEventListener('DOMContentLoaded', () => {
+    const modal = document.getElementById('project-modal');
+    const modalVideo = document.getElementById('modal-video');
+    const modalTitle = document.getElementById('modal-title');
+    const modalDescription = document.getElementById('modal-description');
+    const modalDuration = document.getElementById('modal-duration');
+    const modalSoftware = document.getElementById('modal-software');
+    const modalCredits = document.getElementById('modal-credits');
+    const modalClose = document.querySelector('.modal-close');
+    const modalOverlay = document.querySelector('.modal-overlay');
+
+    // Open modal
+    document.querySelectorAll('[data-project-id]').forEach(card => {
+      card.querySelector('.card-button').addEventListener('click', (e) => {
+        e.preventDefault();
+        const index = parseInt(e.currentTarget.dataset.index);
+        const project = projects[index];
+
+        if (project) {
+          modalTitle.textContent = project.title;
+          modalDescription.textContent = project.longDescription;
+          modalDuration.textContent = project.duration;
+          modalSoftware.textContent = project.software;
+          modalCredits.textContent = project.credits;
+          modalVideo.src = project.videoUrl;
+
+          modal.classList.add('active');
+          modal.setAttribute('aria-hidden', 'false');
+          document.body.style.overflow = 'hidden';
+        }
+      });
+    });
+
+    // Close modal function
+    const closeModal = () => {
+      modal.classList.remove('active');
+      modal.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+      modalVideo.pause();
+      modalVideo.src = '';
+    };
+
+    // Close modal events
+    modalClose.addEventListener('click', closeModal);
+    modalOverlay.addEventListener('click', closeModal);
+
+    // Close on ESC key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && modal.classList.contains('active')) {
+        closeModal();
+      }
+    });
+  });
+</script>
+
+<style>
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-lg);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+  }
+
+  .modal.active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .modal-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(40, 62, 56, 0.9);
+    cursor: pointer;
+  }
+
+  .modal-content {
+    position: relative;
+    background: var(--color-bg-main);
+    border: 1px solid rgba(255, 247, 235, 0.2);
+    border-radius: var(--radius);
+    max-width: 900px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    transform: translateY(20px);
+    transition: transform 0.3s ease;
+  }
+
+  .modal.active .modal-content {
+    transform: translateY(0);
+  }
+
+  .modal-close {
+    position: absolute;
+    top: var(--spacing-lg);
+    right: var(--spacing-lg);
+    background: rgba(255, 247, 235, 0.1);
+    border: 2px solid var(--color-text);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 1;
+    transition: var(--transition);
+    color: var(--color-text);
+  }
+
+  .modal-close:hover {
+    background: var(--color-text);
+    color: var(--color-bg-main);
+  }
+
+  .modal-body {
+    padding: 0;
+  }
+
+  .video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    background: #000;
+    border-radius: var(--radius) var(--radius) 0 0;
+    overflow: hidden;
+  }
+
+  .video-container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .modal-info {
+    padding: var(--spacing-xl);
+  }
+
+  .modal-info h3 {
+    color: var(--color-text);
+    font-size: var(--font-size-2xl);
+    margin-bottom: var(--spacing-md);
+  }
+
+  .modal-info p {
+    color: var(--color-text);
+    line-height: 1.8;
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .modal-meta {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+  }
+
+  .meta-item {
+    display: flex;
+    gap: var(--spacing-sm);
+    color: var(--color-text);
+  }
+
+  .meta-item strong {
+    color: var(--color-primary);
+  }
+
+  @media (max-width: 768px) {
+    .modal {
+      padding: var(--spacing-md);
+    }
+
+    .modal-content {
+      max-height: 100vh;
+      max-width: 100%;
+    }
+
+    .modal-close {
+      top: var(--spacing-md);
+      right: var(--spacing-md);
+      width: 36px;
+      height: 36px;
+    }
+
+    .modal-info {
+      padding: var(--spacing-lg);
+    }
+
+    .modal-info h3 {
+      font-size: var(--font-size-xl);
+    }
+  }
+</style>

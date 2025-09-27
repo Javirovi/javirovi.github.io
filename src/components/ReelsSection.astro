@@ -1,0 +1,54 @@
+---
+export interface Props {
+  lang: string;
+}
+
+import ProjectCard from './ProjectCard.astro';
+import { getTranslations } from '../i18n/translations';
+import { reels } from '../data/reels';
+
+const { lang } = Astro.props;
+const t = getTranslations(lang);
+const projects = reels[lang as 'es' | 'en'] || reels.es;
+---
+
+<section id="reels" class="reels-section">
+  <div class="container">
+    <h2 class="section-title fade-in">{t.sections.reels}</h2>
+    <div class="projects-grid">
+      {projects.map((project, index) => (
+        <ProjectCard project={project} index={index} />
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .reels-section {
+    background-color: var(--color-bg-alt);
+  }
+
+  .section-title {
+    text-align: center;
+    color: var(--color-text);
+    margin-bottom: var(--spacing-2xl);
+  }
+
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-lg);
+  }
+
+  @media (max-width: 1024px) {
+    .projects-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .projects-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
