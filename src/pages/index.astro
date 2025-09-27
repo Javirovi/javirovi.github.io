@@ -1,19 +1,39 @@
 ---
+import Layout from '../layouts/Layout.astro';
+import LanguageToggle from '../components/LanguageToggle.astro';
+import Hero from '../components/Hero.astro';
+import ReelsSection from '../components/ReelsSection.astro';
+import ProjectModal from '../components/ProjectModal.astro';
+import OtherSection from '../components/OtherSection.astro';
+import Footer from '../components/Footer.astro';
+
+// Default to Spanish since it's the primary language
+const lang = 'es';
 ---
 
-<html lang="es">
-	<head>
-		<meta charset="utf-8" />
-		<meta http-equiv="refresh" content="0; url=/es/" />
-		<link rel="canonical" href="/es/" />
-		<title>Redirecting...</title>
-	</head>
-	<body>
-		<script>
-			window.location.href = '/es/';
-		</script>
-		<noscript>
-			<p>Please <a href="/es/">click here</a> if you are not redirected automatically.</p>
-		</noscript>
-	</body>
-</html>
+<Layout title="Portfolio - Animador Junior" lang={lang}>
+  <LanguageToggle currentLang={lang} />
+  <main>
+    <Hero lang={lang} />
+    <ReelsSection lang={lang} />
+    <OtherSection lang={lang} />
+  </main>
+  <Footer lang={lang} />
+  <ProjectModal lang={lang} />
+</Layout>
+
+<script>
+  // Optional: Detect browser language and update language toggle visibility
+  // but don't redirect - just show content
+  document.addEventListener('DOMContentLoaded', () => {
+    const browserLang = navigator.language || navigator.userLanguage;
+    const isSpanish = browserLang.toLowerCase().startsWith('es');
+
+    // If browser is in English, we could show a subtle notification
+    // but we don't redirect - content is already loaded
+    if (!isSpanish && !localStorage.getItem('langNotified')) {
+      // User can switch manually if they want
+      localStorage.setItem('langNotified', 'true');
+    }
+  });
+</script>

@@ -5,7 +5,8 @@ export interface Props {
 
 const { currentLang } = Astro.props;
 const altLang = currentLang === 'es' ? 'en' : 'es';
-const altLangPath = currentLang === 'es' ? '/en/' : '/es/';
+// Spanish is at root, English is at /en/
+const altLangPath = currentLang === 'es' ? '/en/' : '/';
 ---
 
 <div class="language-toggle">
