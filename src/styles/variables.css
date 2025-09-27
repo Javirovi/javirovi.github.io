@@ -13,24 +13,24 @@
 
   /* Typography */
   --font-sans: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-  --font-size-base: 18px;
-  --font-size-lg: 1.25rem;
-  --font-size-xl: 1.5rem;
-  --font-size-2xl: 2rem;
-  --font-size-3xl: 2.5rem;
-  --font-size-4xl: 3rem;
+  --font-size-base: 16px;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.625rem;
+  --font-size-3xl: 2rem;
+  --font-size-4xl: 2.5rem;
 
   /* Spacing */
   --spacing-xs: 0.25rem;
   --spacing-sm: 0.5rem;
-  --spacing-md: 1rem;
-  --spacing-lg: 1.5rem;
-  --spacing-xl: 2rem;
-  --spacing-2xl: 3rem;
-  --spacing-3xl: 4rem;
+  --spacing-md: 0.875rem;
+  --spacing-lg: 1.25rem;
+  --spacing-xl: 1.75rem;
+  --spacing-2xl: 2.5rem;
+  --spacing-3xl: 3.25rem;
 
   /* Layout */
-  --max-width: 2000px;
+  --max-width: 1400px;
   --radius: 8px;
 
   /* Animations */
@@ -48,7 +48,7 @@
 /* Responsive Font Sizes */
 @media (max-width: 768px) {
   :root {
-    --font-size-3xl: 2rem;
-    --font-size-4xl: 2.5rem;
+    --font-size-3xl: 1.75rem;
+    --font-size-4xl: 2rem;
   }
 }

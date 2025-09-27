@@ -97,7 +97,7 @@ const { project, index } = Astro.props;
   }
 
   .play-icon {
-    font-size: 4rem;
+    font-size: 3.5rem;
     color: var(--color-primary);
     filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.5));
     transition: var(--transition);
@@ -108,19 +108,20 @@ const { project, index } = Astro.props;
   }
 
   .card-content {
-    padding: var(--spacing-lg);
+    padding: var(--spacing-md);
   }
 
   .card-content h3 {
     color: var(--color-text);
-    font-size: var(--font-size-lg);
-    margin-bottom: var(--spacing-sm);
+    font-size: var(--font-size-base);
+    font-weight: 600;
+    margin-bottom: var(--spacing-xs);
   }
 
   .card-content p {
     color: var(--color-text);
     opacity: 0.8;
-    font-size: 0.95rem;
+    font-size: 0.875rem;
     margin-bottom: 0;
   }
 </style>

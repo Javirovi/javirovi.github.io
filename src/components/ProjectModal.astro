@@ -140,7 +140,7 @@ const projects = reels[lang as 'es' | 'en'] || reels.es;
     background: var(--color-bg-main);
     border: 1px solid rgba(255, 247, 235, 0.2);
     border-radius: var(--radius);
-    max-width: 900px;
+    max-width: 800px;
     width: 100%;
     max-height: 90vh;
     overflow-y: auto;
@@ -155,13 +155,13 @@ const projects = reels[lang as 'es' | 'en'] || reels.es;
 
   .modal-close {
     position: absolute;
-    top: var(--spacing-lg);
-    right: var(--spacing-lg);
+    top: var(--spacing-md);
+    right: var(--spacing-md);
     background: rgba(255, 247, 235, 0.1);
     border: 2px solid var(--color-text);
     border-radius: 50%;
-    width: 40px;
-    height: 40px;
+    width: 36px;
+    height: 36px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -199,18 +199,19 @@ const projects = reels[lang as 'es' | 'en'] || reels.es;
   }
 
   .modal-info {
-    padding: var(--spacing-xl);
+    padding: var(--spacing-lg);
   }
 
   .modal-info h3 {
     color: var(--color-text);
-    font-size: var(--font-size-2xl);
+    font-size: var(--font-size-xl);
     margin-bottom: var(--spacing-md);
   }
 
   .modal-info p {
     color: var(--color-text);
-    line-height: 1.8;
+    font-size: var(--font-size-base);
+    line-height: 1.7;
     margin-bottom: var(--spacing-lg);
   }
 
