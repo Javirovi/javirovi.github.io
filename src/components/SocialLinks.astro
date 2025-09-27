@@ -1,0 +1,62 @@
+---
+import SocialIcon from './SocialIcon.astro';
+import { siteConfig } from '../config/site-config';
+
+export interface Props {
+  size?: number;
+  className?: string;
+}
+
+const { size = 24, className = '' } = Astro.props;
+---
+
+<div class={`social-links ${className}`}>
+  {siteConfig.social.map((link) => (
+    <a
+      href={link.url}
+      target={link.icon === 'email' ? undefined : '_blank'}
+      rel={link.icon === 'email' ? undefined : 'noopener noreferrer'}
+      aria-label={link.ariaLabel}
+    >
+      <SocialIcon icon={link.icon} size={size} />
+    </a>
+  ))}
+</div>
+
+<style>
+  .social-links {
+    display: flex;
+    gap: var(--spacing-lg);
+  }
+
+  .social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: rgba(255, 247, 235, 0.1);
+    color: var(--color-text);
+    transition: var(--transition);
+  }
+
+  .social-links a:hover {
+    background: var(--color-primary);
+    color: var(--color-bg-main);
+    transform: translateY(-3px);
+  }
+
+  .social-links.footer-social a {
+    width: auto;
+    height: auto;
+    background: none;
+    border-radius: 0;
+  }
+
+  .social-links.footer-social a:hover {
+    background: none;
+    color: var(--color-primary);
+    transform: translateY(-2px);
+  }
+</style>
