@@ -8,7 +8,7 @@ export interface OtherProject {
   description: string;
   thumbnail: string;
   externalLink: string | null;
-  type: string;
+  //type: string;
 }
 
 export interface OtherProjectsData {
@@ -20,53 +20,53 @@ export const otherProjects: OtherProjectsData = {
   es: [
     {
       id: 'otro1',
-      title: 'Colaboración Musical',
-      description: 'Visuales animados para videoclip musical independiente',
+      title: 'Work In Progress',
+      description: '',
       thumbnail: '/images/placeholder.svg',
       externalLink: 'https://vimeo.com/example',
-      type: 'Videoclip'
+      //type: 'Videoclip'
     },
     {
       id: 'otro2',
-      title: 'Proyecto Educativo',
-      description: 'Serie de animaciones educativas para plataforma online',
+      title: 'Work In Progress',
+      description: ',
       thumbnail: '/images/placeholder.svg',
       externalLink: 'https://youtube.com/example',
-      type: 'Educación'
+      //type: 'Educación'
     },
     {
       id: 'otro3',
-      title: 'Festival de Animación',
-      description: 'Participación en festival local con cortometraje experimental',
+      title: 'Work In Progress',
+      description: '',
       thumbnail: '/images/placeholder.svg',
       externalLink: null,
-      type: 'Festival'
+     // type: 'Festival'
     }
   ],
   en: [
     {
       id: 'other1',
-      title: 'Musical Collaboration',
-      description: 'Animated visuals for independent music video',
+      title: 'Work In Progress',
+      description: ',
       thumbnail: '/images/placeholder.svg',
       externalLink: 'https://vimeo.com/example',
-      type: 'Music Video'
+     // type: 'Music Video'
     },
     {
       id: 'other2',
-      title: 'Educational Project',
-      description: 'Series of educational animations for online platform',
+      title: 'Work In Progress',
+      description: '',
       thumbnail: '/images/placeholder.svg',
       externalLink: 'https://youtube.com/example',
-      type: 'Education'
+     // type: 'Education'
     },
     {
       id: 'other3',
-      title: 'Animation Festival',
-      description: 'Participation in local festival with experimental short film',
+      title: 'Work In Progress',
+      description: '',
       thumbnail: '/images/placeholder.svg',
       externalLink: null,
-      type: 'Festival'
+      //type: 'Festival'
     }
   ]
 };
