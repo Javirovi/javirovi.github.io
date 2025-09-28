@@ -30,7 +30,7 @@ export const reels: ReelsData = {
       thumbnail: '/images/placeholder.svg', // For optimized images: import from assets and use .src
       videoUrl: '/videos/project1.mp4',
       software: 'Autodesk Maya y Blender',
-      duration: '30 segundos',
+      duration: '',
       credits: '-'
     },
     {
@@ -41,7 +41,7 @@ export const reels: ReelsData = {
       thumbnail: '/images/placeholder.svg', // For optimized images: import from assets and use .src
       videoUrl: '/videos/project2.mp4',
       software: 'Blender',
-      duration: '45 segundos',
+      duration: '',
       credits: 'Cleanup y color'
     },
     {
@@ -52,7 +52,7 @@ export const reels: ReelsData = {
       thumbnail: '/images/placeholder.svg', // For optimized images: import from assets and use .src
       videoUrl: '/videos/project3.mp4',
       software: 'Blender',
-      duration: '1 minuto',
+      duration: '',
       credits: 'Color'
     }
   ],
@@ -65,7 +65,7 @@ export const reels: ReelsData = {
       thumbnail: '/images/placeholder.svg', // For optimized images: import from assets and use .src
       videoUrl: '/videos/project1.mp4',
       software: 'Autodesk Maya y Blender',
-      duration: '30 seconds',
+      duration: '',
       credits: '-'
     },
     {
@@ -76,7 +76,7 @@ export const reels: ReelsData = {
       thumbnail: '/images/placeholder.svg', // For optimized images: import from assets and use .src
       videoUrl: '/videos/project2.mp4',
       software: 'Blender',
-      duration: '45 seconds',
+      duration: '',
       credits: 'Cleanup and color'
     },
     {
@@ -87,7 +87,7 @@ export const reels: ReelsData = {
       thumbnail: '/images/placeholder.svg', // For optimized images: import from assets and use .src
       videoUrl: '/videos/project3.mp4',
       software: 'Blender',
-      duration: '1 minute',
+      duration: '',
       credits: 'Color'
     }
   ]
