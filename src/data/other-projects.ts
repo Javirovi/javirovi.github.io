@@ -29,7 +29,7 @@ export const otherProjects: OtherProjectsData = {
     {
       id: 'otro2',
       title: 'Work In Progress',
-      description: ',
+      description: '',
       thumbnail: '/images/placeholder.svg',
       externalLink: 'https://youtube.com/example',
       //type: 'Educación'
