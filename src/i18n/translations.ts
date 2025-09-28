@@ -10,7 +10,7 @@ export interface Translations {
   };
   modal: {
     close: string;
-    duration: string;
+   
     software: string;
     credits: string;
   };
