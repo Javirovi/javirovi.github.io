@@ -37,7 +37,7 @@ export const reels: ReelsData = {
       id: 'proyecto2',
       title: 'Lucus Cleanup Reel 2024',
       shortDescription: ' ',
-      longDescription: 'En 2024 realicé mis prácticas universitarias con el animador gallego David Fidalgo, trabajando durante 4 meses en la producción de su corto "Lucus" como artista de cleanup. También realicé otras tareas, como color e iluminación y en general afiancé muchas de mis aptitudes con Grease Pencil',
+      longDescription: 'En 2024 realicé mis prácticas universitarias con el animador gallego David Fidalgo, trabajando durante 4 meses en la producción de su corto "Lucus" como artista de cleanup. También realicé otras tareas, como color e iluminación y en general afiancé muchas de mis aptitudes con Grease Pencil.',
       thumbnail: '/images/placeholder.svg', // For optimized images: import from assets and use .src
       videoUrl: '/videos/project2.mp4',
       software: 'Blender',
