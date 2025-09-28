@@ -11,7 +11,7 @@ export interface ReelProject {
   thumbnail: string;
   videoUrl: string;
   software: string;
-  duration: string;
+ 
   credits: string;
 }
 
@@ -30,7 +30,7 @@ export const reels: ReelsData = {
       thumbnail: '/images/placeholder.svg', // For optimized images: import from assets and use .src
       videoUrl: '/videos/project1.mp4',
       software: 'Autodesk Maya y Blender',
-      duration: '30 segundos',
+     
       credits: '-'
     },
     {
@@ -41,18 +41,18 @@ export const reels: ReelsData = {
       thumbnail: '/images/placeholder.svg', // For optimized images: import from assets and use .src
       videoUrl: '/videos/project2.mp4',
       software: 'Blender',
-      duration: '45 segundos',
+    
       credits: 'Cleanup y color'
     },
     {
       id: 'proyecto3',
       title: 'Cornelius Color Reel 2025',
       shortDescription: '',
-      longDescription: 'Cortometraje de animación 2D con personajes originales. El proyecto abarcó desde el diseño conceptual hasta la animación final, incluyendo rigging y efectos especiales.',
+      longDescription: 'En verano de 2025 tuve la oportunidad',
       thumbnail: '/images/placeholder.svg', // For optimized images: import from assets and use .src
       videoUrl: '/videos/project3.mp4',
       software: 'Blender',
-      duration: '1 minuto',
+      
       credits: 'Color'
     }
   ],
@@ -65,7 +65,7 @@ export const reels: ReelsData = {
       thumbnail: '/images/placeholder.svg', // For optimized images: import from assets and use .src
       videoUrl: '/videos/project1.mp4',
       software: 'Autodesk Maya y Blender',
-      duration: '30 seconds',
+      
       credits: '-'
     },
     {
@@ -76,7 +76,7 @@ export const reels: ReelsData = {
       thumbnail: '/images/placeholder.svg', // For optimized images: import from assets and use .src
       videoUrl: '/videos/project2.mp4',
       software: 'Blender',
-      duration: '45 seconds',
+      
       credits: 'Cleanup and color'
     },
     {
@@ -87,7 +87,7 @@ export const reels: ReelsData = {
       thumbnail: '/images/placeholder.svg', // For optimized images: import from assets and use .src
       videoUrl: '/videos/project3.mp4',
       software: 'Blender',
-      duration: '1 minute',
+      
       credits: 'Color'
     }
   ]
