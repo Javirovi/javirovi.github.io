@@ -11,7 +11,7 @@ export interface ReelProject {
   thumbnail: string;
   videoUrl: string;
   software: string;
- 
+  duration: string;
   credits: string;
 }
 
