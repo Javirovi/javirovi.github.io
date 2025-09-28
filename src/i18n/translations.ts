@@ -10,7 +10,7 @@ export interface Translations {
   };
   modal: {
     close: string;
-   
+    duration: string;
     software: string;
     credits: string;
   };
@@ -48,11 +48,11 @@ export const translations: Record<string, Translations> = {
     },
     sections: {
       reels: "Projects",
-      other: "Other Works"
+      other: "Other projects"
     },
     modal: {
       close: "Close",
-      duration: "Duration",
+      duration: "",
       software: "Software",
       credits: "Credits"
     },
