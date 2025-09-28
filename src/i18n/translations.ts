@@ -28,11 +28,11 @@ export const translations: Record<string, Translations> = {
     },
     sections: {
       reels: "Proyectos",
-      other: "Otros Trabajos"
+      other: "Otros proyectos"
     },
     modal: {
       close: "Cerrar",
-      duration: "Duración",
+      duration: "",
       software: "Software",
       credits: "Créditos"
     },
