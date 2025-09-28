@@ -47,7 +47,7 @@ export const otherProjects: OtherProjectsData = {
     {
       id: 'other1',
       title: 'Work In Progress',
-      description: ',
+      description: '',
       thumbnail: '/images/placeholder.svg',
       externalLink: 'https://vimeo.com/example',
      // type: 'Music Video'
