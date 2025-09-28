@@ -37,7 +37,7 @@ export const reels: ReelsData = {
       id: 'proyecto2',
       title: 'Lucus Cleanup Reel 2024',
       shortDescription: ' ',
-      longDescription: 'En 2024 realicé mis prácticas universitarias con el animador gallego David Fidalgo, trabajando durante 4 meses en la producción de su corto "Lucus" como artista de cleanup. También realicé otras tareas, como color e iluminación.',
+      longDescription: 'En 2024 realicé mis prácticas universitarias con el animador gallego David Fidalgo, trabajando durante 4 meses en la producción de su corto "Lucus" como artista de cleanup. También realicé otras tareas, como color e iluminación y en general afiancé muchas de mis aptitudes con Grease Pencil',
       thumbnail: '/images/placeholder.svg', // For optimized images: import from assets and use .src
       videoUrl: '/videos/project2.mp4',
       software: 'Blender',
@@ -48,7 +48,7 @@ export const reels: ReelsData = {
       id: 'proyecto3',
       title: 'Cornelius Color Reel 2025',
       shortDescription: '',
-      longDescription: 'En verano de 2025 tuve la oportunidad',
+      longDescription: 'En verano de 2025 tuve la oportunidad de trabajar como artista Ink & Paint en el corto "La Verdad te rechaza, Cornelius.", dirigido por Khris Cembe y Marc Torices mediante Hampa Studio.',
       thumbnail: '/images/placeholder.svg', // For optimized images: import from assets and use .src
       videoUrl: '/videos/project3.mp4',
       software: 'Blender',
@@ -61,7 +61,7 @@ export const reels: ReelsData = {
       id: 'project1',
       title: 'ANIMATION REEL 2025',
       shortDescription: '',
-      longDescription: 'Back in 2024 I completed my college internship with galician animator David Fidalgo, working for 4 months on the production of his short film "Lucus" as a cleanup artist. I also performed other tasks such as coloring and lighting. ',
+      longDescription: 'Updated summary of my animation work! ',
       thumbnail: '/images/placeholder.svg', // For optimized images: import from assets and use .src
       videoUrl: '/videos/project1.mp4',
       software: 'Autodesk Maya y Blender',
@@ -72,7 +72,7 @@ export const reels: ReelsData = {
       id: 'project2',
       title: 'Lucus Cleanup Reel 2024',
       shortDescription: '',
-      longDescription: 'Creation of a corporate video with motion graphics to explain complex processes in a visual and attractive way. Includes data animation, custom iconography, and smooth transitions.',
+      longDescription: 'Back in 2024 I completed my college internship with galician animator David Fidalgo, working for 4 months on the production of his short film "Lucus" as a cleanup artist. I also performed other tasks such as coloring and lighting. Overall I strenghted a lot of my Grease Pencil skills.',
       thumbnail: '/images/placeholder.svg', // For optimized images: import from assets and use .src
       videoUrl: '/videos/project2.mp4',
       software: 'Blender',
@@ -83,7 +83,7 @@ export const reels: ReelsData = {
       id: 'project3',
       title: 'Cornelius Color Reel 2025',
       shortDescription: '',
-      longDescription: '2D animated short film with original characters. The project covered from conceptual design to final animation, including rigging and special effects.',
+      longDescription: 'In summer of 2025 I got the opportunity to work as an Ink & Paint artist on the short film "La verdad te rechaza, Cornelius." directed by Khris Cembe and Marc Torices via Hampa Studio.',
       thumbnail: '/images/placeholder.svg', // For optimized images: import from assets and use .src
       videoUrl: '/videos/project3.mp4',
       software: 'Blender',
